@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form th:action="@{/confirm}" method="post">
+		利用者ID:1<input type="hidden" name="user_id" th:value=1><br>
+		注文NO:2<input type="hidden" name="order_number" th:value=2><br>
+		決済金額:1000円<input type="hidden" name="amount" th:value=1000><br>
+		<hr>
+		<!-- カード番号:<input type="text" name="card_number"><br> -->
+		カード番号:●●●● ●●●● ●●●● ●●●●<input type="hidden" name="card_number" th:value=4541604248037001><br>
+		カード有効期限(年):●●年<input type="hidden" name="card_exp_year" th:value=25>
+<!-- 		<select name = "card_exp_year" size="1">
+        	<option value = "25">25</option>
+		</select>--><br>
+ 		カード有効期限(月):●●月<input type="hidden" name="card_exp_month" th:value=12>
+<!-- 		<select name = "card_exp_month" size="1">
+        	<option value = "12">12</option>
+		</select>--><br>
+ 		<hr>
+ 		カード名義人:●● ●●<input type="hidden" name="card_name" th:value="KENJIOYAMADA">
+		<!-- カード名義人:<input type="text" name="card_name"> --><br>
+		
+ 		セキュリティコード:●●●<input type="hidden" name="card_cvv" th:value=295>
+		<!-- セキュリティコード:<input type="text" name="card_cvv"> --><br>
+		<hr>
+		<button type="submit">送信</button>
+	</form>
+</body>
+</html>
+<!-- 	<form th:action="@{/confirm}" method="post">
+		利用者ID:1<input type="hidden" name="user_id" th:value="1"><br>
+		注文NO:2<input type="hidden" name="order_number" th:value="2"><br>
+		決済金額:1000円<input type="hidden" name="amount" th:value="1000"><br>
+		<hr>
+		カード番号:<input type="text" name="card_number"><br>
+		カード番号:●●●● ●●●● ●●●● ●●●●<input type="hidden" name="card_number" th:value="4541604248037001"><br>
+		カード有効期限(年):●●年<input type="hidden" name="card_exp_year" th:value="25">
+		<select name = "card_exp_year" size="1">
+        	<option value = "25">25</option>
+		</select><br>
+ 		カード有効期限(月):●●月<input type="hidden" name="card_exp_month" th:value="12">
+		<select name = "card_exp_month" size="1">
+        	<option value = "12">12</option>
+		</select><br>
+ 		<hr>
+ 		カード名義人:●● ●●<input type="hidden" name="card_name" th:value="KENJIOYAMADA">
+		カード名義人:<input type="text" name="card_name"><br>
+		
+ 		セキュリティコード:●●●<input type="hidden" name="card_cvv" th:value="295">
+		セキュリティコード:<input type="text" name="card_cvv"><br>
+		<hr>
+		<button type="submit">送信</button>
+	</form> -->
